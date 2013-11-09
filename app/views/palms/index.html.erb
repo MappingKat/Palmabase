@@ -1,0 +1,37 @@
+<h1>Listing palms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Block</th>
+      <th>Number</th>
+      <th>Sph</th>
+      <th>River</th>
+      <th>Road</th>
+      <th>Year planted</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @palms.each do |palm| %>
+      <tr>
+        <td><%= palm.block %></td>
+        <td><%= palm.number %></td>
+        <td><%= palm.sph %></td>
+        <td><%= palm.river %></td>
+        <td><%= palm.road %></td>
+        <td><%= palm.year_planted %></td>
+        <td><%= link_to 'Show', palm %></td>
+        <td><%= link_to 'Edit', edit_palm_path(palm) %></td>
+        <td><%= link_to 'Destroy', palm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Palm', new_palm_path %>

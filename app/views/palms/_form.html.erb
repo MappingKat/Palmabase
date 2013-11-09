@@ -1,0 +1,41 @@
+<%= form_for(@palm) do |f| %>
+  <% if @palm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@palm.errors.count, "error") %> prohibited this palm from being saved:</h2>
+
+      <ul>
+      <% @palm.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :block %><br>
+    <%= f.text_field :block %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :sph %><br>
+    <%= f.number_field :sph %>
+  </div>
+  <div class="field">
+    <%= f.label :river %><br>
+    <%= f.check_box :river %>
+  </div>
+  <div class="field">
+    <%= f.label :road %><br>
+    <%= f.check_box :road %>
+  </div>
+  <div class="field">
+    <%= f.label :year_planted %><br>
+    <%= f.date_select :year_planted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
