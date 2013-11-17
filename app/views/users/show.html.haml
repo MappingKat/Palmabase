@@ -1,0 +1,9 @@
+%h3
+  Full name: #{@user.full_name}
+%p
+  Display name: #{@user.display_name}
+%p
+  Email: #{@user.email}
+%p= link_to "Edit", edit_user_path(@user)
+%p= link_to "Remove your account", user_path(@user), method: :delete, data: {confirm:"Really DELETE your account?"}
+%p= link_to "<< Back to Menu", items_path
