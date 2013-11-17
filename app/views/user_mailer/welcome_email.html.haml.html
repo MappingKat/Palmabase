@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Welcome to
+      = succeed "," do
+        %b PALMabase
+      = @user.full_name
+    %p
+      You have successfully signed up to palmabase.com,
+      your username is: #{@user.display_name}.
+      %br/
+    %p
+      To login to the site, just follow this link: #{@url}.
+    %p Thanks for joining and have a great day!
