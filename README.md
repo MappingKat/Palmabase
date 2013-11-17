@@ -1,8 +1,30 @@
-Palmabase
+# Palmabase
+## Understanding your Palms
+
+To checkout this project:
+
+`git clone git@github.com:Mappingkat/Palmabase.git`
+
+`cd Palmabase`
+
+`bundle`
+
+`rake db:setup`
+`rake db:migrate`
+`rake db:seed`
+
+and finally...
+
+`rails s`
+
+*Project built on Rails 4.0.0, and uses Foundation 3*
+
+
+Notes for myself... Palmabase
 =========
 
 
-Homepage-- maps, oil palm inventory... views of option
+Homepage-- large map of where oil palm is cultivated (http://www.indexmundi.com/agriculture/?commodity=palm-oil&graph=production)
 
 1. Authorization  (investors, admin, employees)
 
